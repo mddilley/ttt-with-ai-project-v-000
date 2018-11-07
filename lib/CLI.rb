@@ -66,7 +66,7 @@ class GameMenu
       @player_two = "X"
     else
       puts "Invalid input, please try again"
-      select_player
+      play
     end
     #binding.pry
   end
