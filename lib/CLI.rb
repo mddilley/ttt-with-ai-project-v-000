@@ -6,8 +6,7 @@ class GameMenu
 
   end
 
-  def run_game
-    #binding.pry
+  def run_game # run game mode stored in mode
     if mode == "0"
       zero_player
     elsif mode == "1"
@@ -19,22 +18,22 @@ class GameMenu
     end
   end
 
-  def zero_player
+  def zero_player # AI game init
     computer_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
     computer_game.play
   end
 
-  def one_player
+  def one_player #one player game init
     Game.new(Players::Human.new(player_one), Players::Computer.new(player_two)).play
 
   end
 
-  def two_player
+  def two_player #two player game init
     two_player_game = Game.new(Players::Human.new(player_one), Players::Human.new(player_two))
     two_player_game.play
   end
 
-  def wargames
+  def wargames #wargames game init
     win_count = 0
     100.times {
       wopr_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
@@ -44,7 +43,7 @@ class GameMenu
     puts "#{win_count}"
   end
 
-  def game_mode #prompts for game mode, validates input, and returns choice
+  def game_mode #prompts for game mode, validates input
     puts "Would you like to play a 0, 1, or 2 player game?"
     puts "At risk of the world, enter wargames!"
     @mode = gets.strip.to_s
@@ -57,7 +56,7 @@ class GameMenu
     end
   end
 
-  def select_player #prompts for player token, validates input, runs game using choice
+  def select_player #prompts for player token, validates input
     puts "Player one, would you like to play as X or O?"
     @player_one = gets.strip
     if @player_one == "X"
@@ -68,7 +67,6 @@ class GameMenu
       puts "Invalid input, please try again"
       select_player
     end
-    #binding.pry
   end
 
   def play_again?
