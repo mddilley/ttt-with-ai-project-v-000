@@ -86,6 +86,7 @@ class GameMenu
     select_player
     # game_mode
     # run_game
+    binding.pry
     one_player
     play_again?
   end
