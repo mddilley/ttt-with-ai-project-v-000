@@ -2,7 +2,7 @@
 
 require_relative '../config/environment'
 
-def run_game(input)
+def run_game(input, player_one, player_two)
   if input == "0"
     computer_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
     computer_game.play
