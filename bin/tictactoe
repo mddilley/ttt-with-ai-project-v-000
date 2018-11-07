@@ -14,20 +14,20 @@ def select_game
   else
     puts "Please enter X or O"
   end
-   
+
   if input == "0"
-    computer_game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
+    computer_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
     computer_game.play
   elsif input == "1"
-    one_player_game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
+    one_player_game = Game.new(Players::Human.new(player_one), Players::Computer.new(player_two))
     one_player_game.play
   elsif input == "2"
-    two_player_game = Game.new(Players::Human.new("X"), Players::Human.new("O"))
+    two_player_game = Game.new(Players::Human.new(player_one), Players::Human.new(player_two))
     two_player_game.play
   elsif input == "wargames"
     win_count = 0
     100.times {
-      wopr_game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
+      wopr_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
       wopr_game.play
       win_count += 1 if wopr_game.won?
     }
