@@ -28,7 +28,7 @@ def run_game(player_one, player_two)
 end
 
 
-def game_mode #prompts for game mode and returns choice
+def game_mode #prompts for game mode, validates, and returns choice
   puts "Would you like to play a 0, 1, or 2 player game?"
   puts "At risk of the world, enter wargames!"
   input = gets.strip
