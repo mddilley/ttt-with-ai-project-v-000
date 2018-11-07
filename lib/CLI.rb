@@ -1,6 +1,6 @@
 class CLI
 
-  attr_accessor :player_1, :player_2, :first_player
+  attr_accessor :player_1, :player_2, :first_player, :mode
 
   def run_game(player_one, player_two)
     input = game_mode
@@ -28,7 +28,7 @@ class CLI
   def game_mode #prompts for game mode, validates input, and returns choice
     puts "Would you like to play a 0, 1, or 2 player game?"
     puts "At risk of the world, enter wargames!"
-    input = gets.strip
+    mode = gets.strip
     if input == "0" || input == "1" || input == "2" || input =="wargames"
       input
     else
