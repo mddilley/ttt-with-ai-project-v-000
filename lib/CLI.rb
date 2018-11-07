@@ -18,17 +18,17 @@ class GameMenu
   end
 
   def zero_player
-    computer_game = Game.new(Players::Computer.new(player_1), Players::Computer.new(player_2))
+    computer_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
     computer_game.play
   end
 
   def one_player
-    one_player_game = Game.new(Players::Human.new(player_1), Players::Computer.new(player_2))
+    one_player_game = Game.new(Players::Human.new(player_one), Players::Computer.new(player_two))
     one_player_game.play
   end
 
   def two_player
-    two_player_game = Game.new(Players::Human.new(player_1), Players::Human.new(player_2))
+    two_player_game = Game.new(Players::Human.new(player_one), Players::Human.new(player_two))
     two_player_game.play
   end
 
