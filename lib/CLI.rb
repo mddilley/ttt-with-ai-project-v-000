@@ -84,8 +84,9 @@ class GameMenu
 
   def play
     select_player
-    game_mode
-    run_game
+    # game_mode
+    # run_game
+    one_player
     play_again?
   end
 
