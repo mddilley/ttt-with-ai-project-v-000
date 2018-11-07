@@ -3,6 +3,7 @@ class GameMenu
   attr_accessor :player_one, :player_two, :mode
 
   def initialize
+    
   end
 
   def run_game
