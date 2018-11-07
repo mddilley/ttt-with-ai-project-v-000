@@ -48,7 +48,7 @@ class GameMenu
     puts "At risk of the world, enter wargames!"
     mode = gets.strip
     if mode == "0" || mode == "1" || mode == "2" || mode == "wargames"
-      return
+      mode
     else
       puts "Invalid input, please try again"
       game_mode
