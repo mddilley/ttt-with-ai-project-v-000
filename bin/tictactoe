@@ -56,3 +56,4 @@ puts "Welcome to Tic-tac-toe!"
 puts "Would you like to play a 0, 1, or 2 player game?"
 puts "At risk of the world, enter wargames!"
 select_game
+play_again?
