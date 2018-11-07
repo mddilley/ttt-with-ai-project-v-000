@@ -47,9 +47,9 @@ class GameMenu
     puts "Would you like to play a 0, 1, or 2 player game?"
     puts "At risk of the world, enter wargames!"
     mode = gets.strip.to_s
-    binding.pry
+    #binding.pry
     if mode == "0" || mode == "1" || mode == "2" || mode == "wargames"
-    
+
     else
       puts "Invalid input, please try again"
       game_mode
