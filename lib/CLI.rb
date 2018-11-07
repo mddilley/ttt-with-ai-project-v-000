@@ -2,14 +2,12 @@ class CLI
 
   attr_accessor :player_1, :player_2, :first_player, :mode
 
-  def run_game(player_one, player_two)
+  def run_game
     input = game_mode
     if input == "0"
-      computer_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
-      computer_game.play
+      zero_player
     elsif input == "1"
-      one_player_game = Game.new(Players::Human.new(player_one), Players::Computer.new(player_two))
-      one_player_game.play
+      one_player
     elsif input == "2"
       two_player_game = Game.new(Players::Human.new(player_one), Players::Human.new(player_two))
       two_player_game.play
@@ -24,6 +22,15 @@ class CLI
     end
   end
 
+  def zero_player
+    computer_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
+    computer_game.play
+  end
+
+  def one_player
+    one_player_game = Game.new(Players::Human.new(player_one), Players::Computer.new(player_two))
+    one_player_game.play
+  end
 
   def game_mode #prompts for game mode, validates input, and returns choice
     puts "Would you like to play a 0, 1, or 2 player game?"
