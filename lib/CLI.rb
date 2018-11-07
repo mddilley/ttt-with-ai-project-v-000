@@ -9,15 +9,9 @@ class CLI
     elsif input == "1"
       one_player
     elsif input == "2"
-      
+      two_player
     elsif input == "wargames"
-      win_count = 0
-      100.times {
-        wopr_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
-        wopr_game.play
-        win_count += 1 if wopr_game.won?
-      }
-      puts "#{win_count}"
+      wargames
     end
   end
 
@@ -37,7 +31,13 @@ class CLI
   end
 
   def wargames
-
+    win_count = 0
+    100.times {
+      wopr_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
+      wopr_game.play
+      win_count += 1 if wopr_game.won?
+    }
+    puts "#{win_count}"
   end
 
   def game_mode #prompts for game mode, validates input, and returns choice
