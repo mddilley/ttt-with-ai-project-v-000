@@ -6,6 +6,7 @@ class GameMenu
   end
 
   def run_game
+    binding.pry
     if mode == "0"
       zero_player
     elsif mode == "1"
