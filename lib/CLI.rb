@@ -46,12 +46,12 @@ class GameMenu
     puts "Would you like to play a 0, 1, or 2 player game?"
     puts "At risk of the world, enter wargames!"
     mode = gets.strip
-    # if mode == "0" || mode == "1" || mode == "2" || mode == "wargames"
-    #   mode
-    # else
-    #   puts "Invalid input, please try again"
-    #   game_mode
-    # end
+    if mode == "0" || mode == "1" || mode == "2" || mode == "wargames"
+      return
+    else
+      puts "Invalid input, please try again"
+      game_mode
+    end
   end
 
   def select_player #prompts for player token, validates input, runs game using choice
