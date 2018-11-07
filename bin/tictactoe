@@ -38,38 +38,18 @@ def select_game
   else
     puts "Please enter X or O"
   end
-
   run_game(input, player_one, player_two)
-  # if input == "0"
-  #   computer_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
-  #   computer_game.play
-  # elsif input == "1"
-  #   one_player_game = Game.new(Players::Human.new(player_one), Players::Computer.new(player_two))
-  #   one_player_game.play
-  # elsif input == "2"
-  #   two_player_game = Game.new(Players::Human.new(player_one), Players::Human.new(player_two))
-  #   two_player_game.play
-  # elsif input == "wargames"
-  #   win_count = 0
-  #   100.times {
-  #     wopr_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
-  #     wopr_game.play
-  #     win_count += 1 if wopr_game.won?
-  #   }
-  #   puts "#{win_count}"
-  # else
-  #   puts "Please enter 0, 1, 2, or wargames"
-  #   select_game
-  # end
-  # puts "Great job! Would you like to play another game or quit?"
-  # puts "Please enter: repeat or quit"
-  # repeat = gets.strip
-  # if repeat == "repeat"
-  #   select_game
-  # elsif repeat == "quit"
-  #   return
-  # else
-  #   puts "Please enter: repeat or quit"
+end
+
+def play_again?
+  puts "Would you like to play again or quit?"
+  input = gets.strip
+  if input == "again"
+    select_game
+  elsif  input == "quit"
+    return
+  else
+    puts "Please enter 'again' or 'quit'"
 end
 
 puts "Welcome to Tic-tac-toe!"
