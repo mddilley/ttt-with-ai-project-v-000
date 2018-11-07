@@ -2,6 +2,7 @@
 
 require_relative '../config/environment'
 
+# All code below moved to class GameMenu
 # def run_game(player_one, player_two)
 #   input = game_mode
 #   if input == "0"
