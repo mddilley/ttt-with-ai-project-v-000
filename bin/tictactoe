@@ -5,6 +5,16 @@ require_relative '../config/environment'
 def select_game
   input = gets.strip
   puts "Who should go first and be X?"
+  player_one = gets.strip
+
+  if player_one == "X"
+    player_two = "O"
+  elsif player_one == "O"
+    player_two = "X"
+  else
+    puts "Please enter X or O"
+  end
+   
   if input == "0"
     computer_game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
     computer_game.play
