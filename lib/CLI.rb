@@ -2,6 +2,9 @@ class GameMenu
 
   attr_accessor :player_1, :player_2, :first_player, :mode
 
+  def initialize
+  end
+
   def run_game
     input = game_mode
     if input == "0"
