@@ -21,9 +21,6 @@ def run_game(player_one, player_two)
       win_count += 1 if wopr_game.won?
     }
     puts "#{win_count}"
-  # else
-  #   puts "Please enter 0, 1, 2, or wargames"
-  #   select_game
   end
 end
 
