@@ -1,6 +1,6 @@
 class GameMenu
 
-  attr_accessor :player_one, :player_twp, :first_player, :mode
+  attr_accessor :player_one, :player_two, :mode
 
   def initialize
   end
