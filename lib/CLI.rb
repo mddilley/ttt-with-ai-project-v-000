@@ -7,7 +7,7 @@ class GameMenu
   end
 
   def run_game
-    binding.pry
+    #binding.pry
     if mode == "0"
       zero_player
     elsif mode == "1"
@@ -86,9 +86,8 @@ class GameMenu
 
   def play
     select_player
-    # game_mode
-    # run_game
-    #binding.pry
+    game_mode
+    run_game
     one_player
     play_again?
   end
