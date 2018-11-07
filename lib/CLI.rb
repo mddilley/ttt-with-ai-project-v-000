@@ -46,7 +46,7 @@ class GameMenu
   def game_mode #prompts for game mode, validates input, and returns choice
     puts "Would you like to play a 0, 1, or 2 player game?"
     puts "At risk of the world, enter wargames!"
-    mode = gets.strip
+    mode = gets.strip.to_s
     if mode == "0" || mode == "1" || mode == "2" || mode == "wargames"
       # binding.pry
       return mode
