@@ -50,6 +50,8 @@ def play_again?
     return
   else
     puts "Please enter 'again' or 'quit'"
+    play_again?
+  end
 end
 
 puts "Welcome to Tic-tac-toe!"
