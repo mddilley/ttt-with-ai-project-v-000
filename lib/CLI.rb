@@ -75,7 +75,7 @@ class GameMenu
     puts "Would you like to play again or quit?"
     input = gets.strip
     if input == "again"
-      select_game
+      select_player
     elsif  input == "quit"
       return
     else
