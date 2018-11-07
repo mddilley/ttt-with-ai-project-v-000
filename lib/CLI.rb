@@ -25,7 +25,7 @@ class GameMenu
 
   def one_player
     Game.new(Players::Human.new(player_one), Players::Computer.new(player_two)).play
-    
+
   end
 
   def two_player
@@ -67,6 +67,7 @@ class GameMenu
       puts "Invalid input, please try again"
       select_player
     end
+    binding.pry
   end
 
   def play_again?
@@ -86,7 +87,7 @@ class GameMenu
     select_player
     # game_mode
     # run_game
-    binding.pry
+    #binding.pry
     one_player
     play_again?
   end
