@@ -70,4 +70,4 @@ end
 
 puts "Welcome to Tic-tac-toe!"
 select_game
-play_again?
+
