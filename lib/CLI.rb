@@ -49,8 +49,7 @@ class GameMenu
     mode = gets.strip.to_s
     binding.pry
     if mode == "0" || mode == "1" || mode == "2" || mode == "wargames"
-      # binding.pry
-      return mode
+    
     else
       puts "Invalid input, please try again"
       game_mode
