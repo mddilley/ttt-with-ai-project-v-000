@@ -24,8 +24,8 @@ class GameMenu
   end
 
   def one_player
-    one_player_game = Game.new(Players::Human.new(player_one), Players::Computer.new(player_two))
-    one_player_game.play
+    Game.new(Players::Human.new(player_one), Players::Computer.new(player_two)).play
+    
   end
 
   def two_player
