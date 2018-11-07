@@ -37,7 +37,7 @@ def game_mode #prompts for game mode, validates, and returns choice
   end
 end
 
-def select_game
+def select_game #prompts for player token, validates, runs game using choice
   puts "Player one, would you like to play as X or O?"
   player_one = gets.strip
 
