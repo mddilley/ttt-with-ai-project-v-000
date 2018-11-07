@@ -1,4 +1,4 @@
-class CLI
+class GameMenu
 
   attr_accessor :player_1, :player_2, :first_player, :mode
 
@@ -55,7 +55,6 @@ class CLI
   def select_player #prompts for player token, validates input, runs game using choice
     puts "Player one, would you like to play as X or O?"
     player_one = gets.strip
-
     if player_one == "X"
       player_two = "O"
     elsif player_one == "O"
@@ -64,8 +63,6 @@ class CLI
       puts "Invalid input, please try again"
       select_player
     end
-    # run_game(player_one, player_two)
-    # play_again?
   end
 
   def play_again?
@@ -79,6 +76,13 @@ class CLI
       puts "Please enter 'again' or 'quit'"
       play_again?
     end
+  end
+
+  def play
+    select_player
+    game_mode
+    run_game
+    play_again?
   end
 
 end
