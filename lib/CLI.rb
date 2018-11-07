@@ -6,14 +6,13 @@ class GameMenu
   end
 
   def run_game
-    input = game_mode
-    if input == "0"
+    if mode == "0"
       zero_player
-    elsif input == "1"
+    elsif mode == "1"
       one_player
-    elsif input == "2"
+    elsif mode == "2"
       two_player
-    elsif input == "wargames"
+    elsif mode == "wargames"
       wargames
     end
   end
