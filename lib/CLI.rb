@@ -36,7 +36,7 @@ class GameMenu
   def wargames
     win_count = 0
     100.times {
-      wopr_game = Game.new(Players::Computer.new(player_1), Players::Computer.new(player_2))
+      wopr_game = Game.new(Players::Computer.new(player_one), Players::Computer.new(player_two))
       wopr_game.play
       win_count += 1 if wopr_game.won?
     }
