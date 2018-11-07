@@ -88,7 +88,6 @@ class GameMenu
     select_player
     game_mode
     run_game
-    one_player
     play_again?
   end
 
