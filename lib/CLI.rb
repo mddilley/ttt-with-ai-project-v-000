@@ -6,7 +6,7 @@ class GameMenu
 
   end
 
-  def run_game # run game mode stored in mode
+  def run_game # run game mode stored in @mode
     if mode == "0"
       zero_player
     elsif mode == "1"
