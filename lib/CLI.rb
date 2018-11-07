@@ -49,8 +49,8 @@ class CLI
       puts "Invalid input, please try again"
       select_player
     end
-    run_game(player_one, player_two)
-    play_again?
+    # run_game(player_one, player_two)
+    # play_again?
   end
 
   def play_again?
