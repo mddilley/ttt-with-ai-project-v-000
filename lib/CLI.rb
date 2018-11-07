@@ -59,11 +59,11 @@ class GameMenu
 
   def select_player #prompts for player token, validates input, runs game using choice
     puts "Player one, would you like to play as X or O?"
-    player_one = gets.strip
-    if player_one == "X"
-      player_two = "O"
+    @player_one = gets.strip
+    if @player_one == "X"
+      @player_two = "O"
     elsif player_one == "O"
-      player_two = "X"
+      @player_two = "X"
     else
       puts "Invalid input, please try again"
       select_player
