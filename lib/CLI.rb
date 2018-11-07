@@ -67,7 +67,6 @@ class GameMenu
       puts "Invalid input, please try again"
       select_player
     end
-    binding.pry
   end
 
   def play_again?
