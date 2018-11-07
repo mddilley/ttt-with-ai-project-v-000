@@ -53,6 +53,7 @@ def select_game
     select_game
   end
   run_game(player_one, player_two)
+  play_again?
 end
 
 def play_again?
@@ -70,4 +71,3 @@ end
 
 puts "Welcome to Tic-tac-toe!"
 select_game
-
