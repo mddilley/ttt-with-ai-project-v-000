@@ -4,7 +4,7 @@ require_relative '../config/environment'
 
 def select_game
   input = gets.strip
-  puts "Who should go first and be X?"
+  puts "Player one, would you like to play as X or O?"
   player_one = gets.strip
 
   if player_one == "X"
