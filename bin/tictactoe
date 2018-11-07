@@ -37,6 +37,7 @@ def select_game
     player_two = "X"
   else
     puts "Please enter X or O"
+    select_game
   end
   run_game(input, player_one, player_two)
 end
