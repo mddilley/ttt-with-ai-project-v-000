@@ -66,7 +66,7 @@ class GameMenu
       @player_two = "X"
     else
       puts "Invalid input, please try again"
-      play
+      select_player
     end
     #binding.pry
   end
@@ -75,7 +75,7 @@ class GameMenu
     puts "Would you like to play again or quit?"
     input = gets.strip
     if input == "again"
-      select_player
+      play
     elsif  input == "quit"
       return
     else
